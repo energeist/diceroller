@@ -1,0 +1,25 @@
+{
+  "name": "diceroller",
+  "version": "1.0.0",
+  "description": "Module to simulate dice rolls of various sides and coin flips",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/energeist/diceroller.git"
+  },
+  "keywords": [
+    "dice",
+    "roller",
+    "diceroller",
+    "d20"
+  ],
+  "author": "Mark Rattle <mark.rattle@gmail.com> (http://www.github.com/energeist)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/energeist/diceroller/issues"
+  },
+  "homepage": "https://github.com/energeist/diceroller#readme"
+}
