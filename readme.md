@@ -1,4 +1,4 @@
-# Diceroller module
+# Simpledice module
 
 ## Installation instructions
 
