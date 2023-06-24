@@ -10,6 +10,7 @@ const allDice = [
   new Die(6, 'Six-sided die, 1d6 rolls 1-6'),
   new Die(8, 'Eight-sided die, 1d8 rolls 1-8'),
   new Die(10, 'Ten-sided die, 1d10 rolls 1-10'),
+  new Die(12, 'Twelve-sided die, 1d12 rolls 1-12'),
   new Die(20, 'Twenty-sided die, 1d20 rolls 1-20'),
   new Die(100, 'One-hundred-sided die, 1d100 rolls 1-100')
 ];
