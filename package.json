@@ -1,25 +1,36 @@
 {
   "name": "simpledice",
-  "version": "1.0.1",
-  "description": "Module to simulate dice rolls of various sides and coin flips",
+  "version": "1.0.3",
+  "description": "Package to simulate dice rolls of various sides and coin flips",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/energeist/diceroller.git"
+    "url": "git+https://github.com/energeist/simpledice.git"
   },
   "keywords": [
+    "simple",
     "dice",
     "roller",
     "diceroller",
-    "d20"
+    "simpledice",
+    "d4",
+    "d6",
+    "d8",
+    "d10",
+    "d12",
+    "d20",
+    "d100",
+    "coin",
+    "flip",
+    "coinflip"
   ],
   "author": "Mark Rattle <mark.rattle@gmail.com> (http://www.github.com/energeist)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/energeist/diceroller/issues"
+    "url": "https://github.com/energeist/simpledice/issues"
   },
-  "homepage": "https://github.com/energeist/diceroller#readme"
+  "homepage": "https://github.com/energeist/simpledice#readme"
 }
