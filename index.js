@@ -19,7 +19,7 @@ const allowedSides = allDice.map(die => die.sides);
 
 exports.rollOne = (sides) => {
   if (!allowedSides.includes(sides)) {
-    return `You've chosen an invalid number of sides.  Number of sides must be one of the following: ${allowedSides}`
+    return `You've chosen an invalid number of sides.  Number of sides must be one of the following: ${allowedSides}`;
   } else {
     return Math.ceil(Math.random() * sides);
   }
@@ -34,13 +34,19 @@ exports.rollMany = (dice) => {
   } else if (typeof(dice) === 'object') {
     rolls = dice.map(die => {
       const split = die.split('d');
-      return [parseInt(split[0]), split[1]];
+      return [split[0], split[1]];
     });
     let illegalRoll = "";
     let rollTotal = 0;
     rolls.forEach(roll => {
-      if (!allowedSides.includes(parseInt(roll[1])) || parseInt(roll[1]) === 'NaN') {
-        illegalRoll = roll[1];
+      if (!roll[0] || !roll[1]) {
+        return illegalRoll = "One or more of your dice groups has invalid syntax."
+      } else if (parseInt(roll[0]).toString() === "NaN") {
+        illegalRoll = `One of your rolls had an invalid number of dice: ${roll[0]}`;
+        return illegalRoll;
+      } else if (!allowedSides.includes(parseInt(roll[1])) || parseInt(roll[1]).toString() === "NaN") {
+        illegalRoll = `One of your rolls had an invalid die: ${roll[1]}. Number of die sides must be one of the following: ${allowedSides}.`
+        return illegalRoll;
       } else {
         for (let i = 0; i < parseInt(roll[0]); i++) {
           rollTotal += Math.ceil(Math.random() * roll[1]);
@@ -48,10 +54,7 @@ exports.rollMany = (dice) => {
       }
       return rollTotal;
     })
-    
-    return illegalRoll
-      ? `One of your dice had an invalid number of sides: ${illegalRoll}. Number of sides must be one of the following: ${allowedSides}.`
-      : rollTotal;
+    return illegalRoll ? illegalRoll : rollTotal;
   }
 }
 
