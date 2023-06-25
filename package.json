@@ -1,6 +1,6 @@
 {
   "name": "simpledice",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Package to simulate dice rolls of various sides and coin flips",
   "main": "index.js",
   "scripts": {
