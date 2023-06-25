@@ -1,6 +1,6 @@
 {
   "name": "simpledice",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Package to simulate dice rolls of various sides and coin flips",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,12 @@
     "d100",
     "coin",
     "flip",
-    "coinflip"
+    "coinflip",
+    "you",
+    "can",
+    "pet",
+    "the",
+    "cat"
   ],
   "author": "Mark Rattle <mark.rattle@gmail.com> (http://www.github.com/energeist)",
   "license": "MIT",

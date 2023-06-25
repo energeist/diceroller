@@ -1,4 +1,6 @@
-# Simpledice module
+# Simpledice
+[Package available on NPM](https://www.npmjs.com/package/simpledice)
+
 A simple module to simulate customizable dice rolls and coin flips.  This module will roll any combination of dice with 4, 6, 8, 10, 12, 20 or 100 sides. 
 
 ## Installation instructions
@@ -11,6 +13,8 @@ Import it into your JS/Node project like so:
 ```
 const roller = require('simpledice');
 ```
+
+Roll on (and don't forget about the cat!)
 
 ## Methods && Usage
 - `.coinFlip()` 
