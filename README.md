@@ -23,7 +23,7 @@ const roller = require('simpledice);
   - Strings must be of format `"<NUMBER>d<SIDES>"`, e.g. `"2d6"` or `"3d20"` for a group of one die type, or `["2d6", "1d20"]` for a group of many dice types, where `<NUMBER>` is the number of dice in a group of dice with `<SIDES>` number of sides.
   - Returns a string error message if the provided arguments to not conform to
 
-!> `.cat()` - Takes no arguments, and you get to pet the cat! 
+>! `.cat()` - Takes no arguments, and you get to pet the cat! 
 
 [![Package Version](https://img.shields.io/npm/v/simpledice)](https://www.npmjs.com/package/simpledice)
 [![Total Downloads](https://img.shields.io/npm/dt/simpledice)](https://www.npmjs.com/package/simpledice)
