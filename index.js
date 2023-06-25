@@ -62,4 +62,8 @@ exports.coinFlip = () => {
   return ["heads", "tails"][Math.floor(Math.random() * 2)];
 }
 
+exports.cat = () => {
+  return "A cat swats your dice away. You pet the cat. Please roll again!"
+}
+
 exports.allDice = allDice;
