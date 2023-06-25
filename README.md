@@ -9,7 +9,7 @@ npm install simpledice
 
 Import it into your JS/Node project like so:
 ```
-const roller = require('simpledice);
+const roller = require('simpledice');
 ```
 
 ## Methods && Usage
