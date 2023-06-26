@@ -25,37 +25,30 @@ exports.rollOne = (sides) => {
   }
 }
 
-exports.rollMany = (dice) => {
-  if (typeof(dice) === 'string') {
-    const params = dice.split('d');
-    return allowedSides.includes(parseInt(params[1])) 
-      ? (parseInt(params[0]) * parseInt(params[1]))
-      : `Invalid number of sides: ${params[1]}. Number of sides must be one of the following: ${allowedSides}.`;
-  } else if (typeof(dice) === 'object') {
-    rolls = dice.map(die => {
-      const split = die.split('d');
-      return [split[0], split[1]];
-    });
-    let illegalRoll = "";
-    let rollTotal = 0;
-    rolls.forEach(roll => {
-      if (!roll[0] || !roll[1]) {
-        return illegalRoll = "One or more of your dice groups has invalid syntax."
-      } else if (parseInt(roll[0]).toString() === "NaN") {
-        illegalRoll = `One of your rolls had an invalid number of dice: ${roll[0]}`;
-        return illegalRoll;
-      } else if (!allowedSides.includes(parseInt(roll[1])) || parseInt(roll[1]).toString() === "NaN") {
-        illegalRoll = `One of your rolls had an invalid die: ${roll[1]}. Number of die sides must be one of the following: ${allowedSides}.`
-        return illegalRoll;
-      } else {
-        for (let i = 0; i < parseInt(roll[0]); i++) {
-          rollTotal += Math.ceil(Math.random() * roll[1]);
-        }
+exports.rollMany = (...dice) => {
+  rolls = dice.map(die => {
+    const split = die.split('d');
+    return [split[0], split[1]];
+  });
+  let illegalRoll = "";
+  let rollTotal = 0;
+  rolls.forEach(roll => {
+    if (!roll[0] || !roll[1]) {
+      return illegalRoll = "One or more of your dice groups has invalid syntax.";
+    } else if (parseInt(roll[0]).toString() === "NaN") {
+      illegalRoll = `One of your rolls had an invalid number of dice: ${roll[0]}`;
+      return illegalRoll;
+    } else if (!allowedSides.includes(parseInt(roll[1])) || parseInt(roll[1]).toString() === "NaN") {
+      illegalRoll = `One of your rolls had an invalid die: ${roll[1]}. Number of die sides must be one of the following: ${allowedSides}.`;
+      return illegalRoll;
+    } else {
+      for (let i = 0; i < parseInt(roll[0]); i++) {
+        rollTotal += Math.ceil(Math.random() * roll[1]);
       }
-      return rollTotal;
-    })
-    return illegalRoll ? illegalRoll : rollTotal;
-  }
+    }
+    return rollTotal;
+  })
+  return illegalRoll ? illegalRoll : rollTotal;
 }
 
 exports.coinFlip = () => {
@@ -63,7 +56,7 @@ exports.coinFlip = () => {
 }
 
 exports.cat = () => {
-  return "A cat swats your dice away. You pet the cat. Please roll again!"
+  return "A cat swats your dice away. You pet the cat. Please roll again!";
 }
 
 exports.allDice = allDice;
